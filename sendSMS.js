@@ -20,7 +20,7 @@ const sendMessage = (message, to) => {
 };
 
 // Example usage: send an SMS
-const recipientNumber = '+254798872063'; // Replace with the recipient's phone number
+const recipientNumber = process.env.PHONENUMBER; // Replace with the recipient's phone number
 const textMessage = "Hello, this is a test message from Twilio!";
 
 // Call the function to send the message

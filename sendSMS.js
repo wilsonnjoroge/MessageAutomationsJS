@@ -11,16 +11,15 @@ const client = new twilio(accountSid, authToken);
 const sendMessage = (message, to) => {
     client.messages.create({
         body: message,
-        from: +12086841858, // Your Twilio phone number
-        to: to // Recipient's phone number in E.164 format (e.g., +254798872063)
+        from: +12086841858, 
+        to: to 
     })
     .then(message => console.log(`Message sent: ${message.sid}`))
     .catch(error => console.error(`Error sending message: ${error.message}`));
 };
 
 // Example usage: send an SMS
-const recipientNumber = process.env.PHONENUMBER; // Replace with the recipient's phone number
+const recipientNumber = process.env.PHONENUMBER; 
 const textMessage = "Hello, this is a test message from Twilio!";
 
-// Call the function to send the message
 sendMessage(textMessage, recipientNumber);

@@ -7,7 +7,6 @@ const authToken = process.env.AUTHTOKEN;
 // Initialize the Twilio client
 const client = new twilio(accountSid, authToken);
 
-// Function to send an SMS message
 const sendMessage = (message, to) => {
     client.messages.create({
         body: message,

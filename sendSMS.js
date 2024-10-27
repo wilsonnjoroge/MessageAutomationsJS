@@ -4,7 +4,6 @@ const dotenv = require('dotenv').config();
 const accountSid = process.env.ACOUNTSID; 
 const authToken = process.env.AUTHTOKEN; 
 
-// Initialize the Twilio client
 const client = new twilio(accountSid, authToken);
 
 const sendMessage = (message, to) => {

@@ -16,7 +16,6 @@ const sendMessage = (message, to) => {
     .catch(error => console.error(`Error sending message: ${error.message}`));
 };
 
-// Example usage: send an SMS
 const recipientNumber = process.env.PHONENUMBER; 
 const textMessage = "Hello, this is a test message from Twilio!";
 

@@ -6,7 +6,6 @@ const authToken = process.env.AUTHTOKEN;
 
 const client = new twilio(accountSid, authToken);
 
-// method
 const sendMessage = (message, to) => {
     client.messages.create({
         body: message,
